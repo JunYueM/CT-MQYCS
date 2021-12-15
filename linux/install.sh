@@ -1560,7 +1560,7 @@ uninstall() {
 clear
 while :; do
     echo
-    echo "....... CaoCaoMinerTaxProxy 一键安装脚本 & 管理脚本 by MYJUNYUE ......."
+    echo "....... MQYCS 一键安装脚本 & 管理脚本 by MYJUNYUE ......."
     echo
     echo " 1. 安装"
     echo
