@@ -1365,25 +1365,25 @@ start_write_config() {
     echo
     echo "下载完成，开始写入配置"
     echo
-    chmod a+x $installPath/ccminertaxproxy
+    chmod a+x $installPath/MQYCS
     if [ -d "/etc/supervisor/conf/" ]; then
         rm /etc/supervisor/conf/ccworker${installNumberTag}.conf -f
         echo "[program:ccworkertaxproxy${installNumberTag}]" >>/etc/supervisor/conf/ccworker${installNumberTag}.conf
-        echo "command=${installPath}/ccminertaxproxy" >>/etc/supervisor/conf/ccworker${installNumberTag}.conf
+        echo "command=${installPath}/MQYCS" >>/etc/supervisor/conf/ccworker${installNumberTag}.conf
         echo "directory=${installPath}/" >>/etc/supervisor/conf/ccworker${installNumberTag}.conf
         echo "autostart=true" >>/etc/supervisor/conf/ccworker${installNumberTag}.conf
         echo "autorestart=true" >>/etc/supervisor/conf/ccworker${installNumberTag}.conf
     elif [ -d "/etc/supervisor/conf.d/" ]; then
         rm /etc/supervisor/conf.d/ccworker${installNumberTag}.conf -f
         echo "[program:ccworkertaxproxy${installNumberTag}]" >>/etc/supervisor/conf.d/ccworker${installNumberTag}.conf
-        echo "command=${installPath}/ccminertaxproxy" >>/etc/supervisor/conf.d/ccworker${installNumberTag}.conf
+        echo "command=${installPath}/MQYCS" >>/etc/supervisor/conf.d/ccworker${installNumberTag}.conf
         echo "directory=${installPath}/" >>/etc/supervisor/conf.d/ccworker${installNumberTag}.conf
         echo "autostart=true" >>/etc/supervisor/conf.d/ccworker${installNumberTag}.conf
         echo "autorestart=true" >>/etc/supervisor/conf.d/ccworker${installNumberTag}.conf
     elif [ -d "/etc/supervisord.d/" ]; then
         rm /etc/supervisord.d/ccworker${installNumberTag}.ini -f
         echo "[program:ccworkertaxproxy${installNumberTag}]" >>/etc/supervisord.d/ccworker${installNumberTag}.ini
-        echo "command=${installPath}/ccminertaxproxy" >>/etc/supervisord.d/ccworker${installNumberTag}.ini
+        echo "command=${installPath}/MQYCS" >>/etc/supervisord.d/ccworker${installNumberTag}.ini
         echo "directory=${installPath}/" >>/etc/supervisord.d/ccworker${installNumberTag}.ini
         echo "autostart=true" >>/etc/supervisord.d/ccworker${installNumberTag}.ini
         echo "autorestart=true" >>/etc/supervisord.d/ccworker${installNumberTag}.ini
